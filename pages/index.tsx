@@ -25,6 +25,7 @@ import { Hero } from "components/hero";
 import { Link, Br } from "@saas-ui/react";
 import { Em } from "components/typography";
 import { NextjsLogo, ChakraLogo } from "components/logos";
+import "./css/globals.css";
 import {
   FiArrowRight,
   FiBox,
