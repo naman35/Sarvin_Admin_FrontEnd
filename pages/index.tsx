@@ -67,8 +67,6 @@ const Home: NextPage = () => {
         <HeroSection />
 
         <HighlightsSection />
-
-        <TestimonialsSection />
       </Box>
     </Box>
   );
@@ -86,25 +84,70 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+                Only{" "}
+                <span
+                  style={{
+                    boxSizing: "border-box",
+                    display: "inline-block",
+                    overflow: "hidden",
+                    width: "initial",
+                    height: "initial",
+                    background: "none",
+                    opacity: 1,
+                    border: 0,
+                    margin: 0,
+                    padding: 0,
+                    position: "relative",
+                    maxWidth: "100%",
+                  }}
+                >
+                  <span
+                    style={{
+                      boxSizing: "border-box",
+                      display: "block",
+                      overflow: "hidden",
+                      width: "initial",
+                      height: "initial",
+                      background: "transparent",
+                      opacity: 1,
+                      border: 0,
+                      margin: 0,
+                      padding: 0,
+                      position: "relative",
+                      maxWidth: "100%",
+                    }}
+                  >
+                    <div
+                      style={{
+                        color: "#E65C55",
+                        transition: "color 2s",
+                        fontSize: "50px",
+                        fontStyle: "normal",
+                        fontWeight: 600,
+                        letterSpacing: "-1px",
+                      }}
+                    >
+                      <u>SARVIN</u>
+                    </div>
+                  </span>
+                </span>{" "}
+                Builders
+                <Br /> Are Allowed!
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
                 This heading welcomes users to the admin portal of{" "}
                 <Em>Sarvin</Em>, setting the tone for a professional and
-                efficient administrative experience. Admin UI is a
+                efficient administrative experience.
               </FallInPlace>
             }
           >
             <FallInPlace delay={0.8}>
-              <HStack pt="4" pb="12" spacing="8">
-                <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
-              </HStack>
+              <br />
 
               <ButtonGroup spacing={4} alignItems="center">
-                <ButtonLink colorScheme="primary" size="lg" href="/login">
+                <ButtonLink colorScheme="red" size="lg" href="/login">
                   Login
                 </ButtonLink>
                 <ButtonLink
@@ -141,7 +184,7 @@ const HeroSection: React.FC = () => {
             <FallInPlace delay={1}>
               <Box overflow="hidden" height="100%">
                 <Image
-                  src="/static/screenshots/list.png"
+                  src="/static/screenshots/list_.png"
                   layout="fixed"
                   width={1200}
                   height={762}
@@ -163,13 +206,16 @@ const HighlightsSection = () => {
 
   return (
     <Highlights>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+      <HighlightsItem colSpan={[1, null, 2]} title="Sarvin Foundation">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
+            At Sarvin, we revolutionize influencer marketing by connecting
+            brands and influencers seamlessly, enhancing transparency and
+            simplicity. Our platform empowers brands to achieve broader product
+            reach cost-effectively while enabling influencers to drive business
+            growth with increased orders and expanded opportunities. Join us in
+            transforming the influencer landscape and amplifying your brand's
+            success.
           </Text>
 
           <Flex
@@ -180,15 +226,15 @@ const HighlightsSection = () => {
             py="1"
             ps="8"
             pe="2"
-            bg="primary.900"
+            bg="red.400"
             _dark={{ bg: "gray.900" }}
           >
             <Box>
               <Text color="yellow.400" display="inline">
-                yarn add
+                Sarvin
               </Text>{" "}
               <Text color="cyan.300" display="inline">
-                @saas-ui/react
+                About us Page
               </Text>
             </Box>
             <IconButton
@@ -203,50 +249,69 @@ const HighlightsSection = () => {
           </Flex>
         </VStack>
       </HighlightsItem>
-      <HighlightsItem title="Solid foundations">
+      <HighlightsItem title="For Influencers">
         <Text color="muted" fontSize="lg">
-          We don&apos;t like to re-invent the wheel, neither should you. We
-          selected the most productive and established tools in the scene and
-          build Saas UI on top of it.
+          Welcome to Sarvin, where we've reimagined influencer marketing with a
+          tech-driven platform that enhances transparency and accessibility. You
+          can easily browse all brand deals, optimizing your chances with
+          competitive bidding options that benefit both influencers and brands
+          alike. By facilitating direct communication and eliminating agency
+          intermediaries, Sarvin fosters genuine collaborations. Discover
+          collaborations seamlessly and grow your brand with Sarvin.
         </Text>
       </HighlightsItem>
       <HighlightsTestimonialItem
-        name="Renata Alink"
-        description="Founder"
-        avatar="/static/images/avatar.jpg"
-        gradient={["pink.200", "purple.500"]}
+        name="Naman Agarwal"
+        description="Co-Founder"
+        avatar="/static/images/profilepic.jpeg"
+        gradient={["red.200", "red.500"]}
       >
-        “Saas UI helped us set up a beautiful modern UI in no time. It saved us
-        hundreds of hours in development time and allowed us to focus on
-        business logic for our specific use-case from the start.”
+        “ Our vision extends beyond mere transactions; we envision a community
+        where creativity meets opportunity, where influencers can expand their
+        influence and brands can amplify their impact. Join us at Sarvin and
+        together, let's redefine the future of influencer marketing.”
       </HighlightsTestimonialItem>
       <HighlightsItem
         colSpan={[1, null, 2]}
-        title="Start your next idea two steps ahead"
+        title="How Brands or Business grow through Sarvin?"
       >
         <Text color="muted" fontSize="lg">
-          We took care of all your basic frontend needs, so you can start
-          building functionality that makes your product unique.
+          Our interface offers a clear, single-page view of all candidate bids,
+          ensuring transparency and efficiency. Brands can leverage
+          sophisticated filters to narrow down candidates based on reach,
+          demographics, location, follower count, audience type, pricing
+          preferences, and past performance indicators like previous records and
+          sample videos. Our unique bidding system allows brands to optimize
+          their marketing budgets by selecting influencers who offer competitive
+          rates for similar services. Direct communication tools facilitate
+          seamless interactions between brands and influencers, fostering
+          collaborations not only for marketing campaigns but also for
+          influencer merchandise initiatives. As we evolve, our robust analytics
+          provide comprehensive insights into candidate performance and
+          historical data, empowering brands to make data-driven decisions and
+          achieve impactful marketing results.
         </Text>
         <Wrap mt="8">
           {[
-            "authentication",
-            "navigation",
-            "crud",
-            "settings",
-            "multi-tenancy",
-            "layouts",
-            "billing",
-            "a11y testing",
-            "server-side rendering",
-            "documentation",
-            "onboarding",
-            "storybooks",
-            "theming",
-            "upselling",
-            "unit testing",
-            "feature flags",
-            "responsiveness",
+            "Platform",
+            "Brands",
+            "Influencers",
+            "Product marketing",
+            "Interface",
+            "Bids",
+            "Transparency",
+            "Efficiency",
+            "Filters",
+            "Reach",
+            "Demographics",
+            "Location",
+            "Follower count",
+            "Pricing preferences",
+            "Performance indicators",
+            "Marketing budgets",
+            "Direct communication",
+            "Collaborations",
+            "Marketing campaigns",
           ].map((value) => (
             <Tag
               key={value}
@@ -301,10 +366,9 @@ export async function getStaticProps() {
   return {
     props: {
       announcement: {
-        title: "Support us by becoming a stargazer! 🚀 ",
-        description:
-          '<img src="https://img.shields.io/github/stars/saas-js/saas-ui.svg?style=social&label=Star" />',
-        href: "https://github.com/saas-js/saas-ui",
+        title: "Click here to get Deployed View of Sarvin 🚀 ",
+        description: "<div>Click Here</div>",
+        href: "https://sarvin-introductory-repo.vercel.app/",
         action: false,
       },
     },
