@@ -6,33 +6,30 @@ import DashIcon from "../../../components/icons/DashIcon";
 
 export function SidebarLinks(props) {
   // Chakra color mode
-  let location = useLocation();
 
-  const { routes } = props;
-
-  // verifies if routeName is the one active (in browser input)
-  const activeRoute = (routeName) => {
-    return location.pathname.includes(routeName);
+  const {
+    routes,
+    selectedComponent = {},
+    setSelectedComponent = () => {},
+  } = props;
+  const handleRouteClick = (component) => {
+    setSelectedComponent(component);
   };
-
   const createLinks = (routes) => {
     return routes.map((route, index) => {
-      if (
-        route.layout === "/admin" ||
-        route.layout === "/auth" ||
-        route.layout === "/rtl"
-      ) {
+      if (true) {
         return (
-          <Link key={index} to={route.layout + "/" + route.path}>
+          <div key={index}>
             <div className="relative mb-3 flex hover:cursor-pointer">
               <li
                 className="my-[3px] flex cursor-pointer items-center px-8"
                 key={index}
+                onClick={() => handleRouteClick(route.component)}
               >
                 <span
                   className={`${
-                    activeRoute(route.path) === true
-                      ? "font-bold text-brand-500 dark:text-white"
+                    selectedComponent == route.component
+                      ? "font-bold text-brand-500 text-black"
                       : "font-medium text-gray-600"
                   }`}
                 >
@@ -40,19 +37,19 @@ export function SidebarLinks(props) {
                 </span>
                 <p
                   className={`leading-1 ml-4 flex ${
-                    activeRoute(route.path) === true
-                      ? "font-bold text-navy-700 dark:text-white"
+                    selectedComponent == route.component
+                      ? "font-bold text-navy-700 text-black"
                       : "font-medium text-gray-600"
                   }`}
                 >
                   {route.name}
                 </p>
               </li>
-              {activeRoute(route.path) ? (
+              {selectedComponent == route.component ? (
                 <div class="absolute right-0 top-px h-9 w-1 rounded-lg bg-brand-500 dark:bg-brand-400" />
               ) : null}
             </div>
-          </Link>
+          </div>
         );
       }
     });

@@ -1,5 +1,5 @@
-import Card from "components/card";
-import Progress from "components/progress";
+import Card from "../../../../components/card";
+import Progress from "../../../../components/progress";
 import React, { useMemo } from "react";
 import {
   useGlobalFilter,
