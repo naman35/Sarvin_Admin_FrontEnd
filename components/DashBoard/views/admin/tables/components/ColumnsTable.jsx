@@ -37,7 +37,7 @@ const ColumnsTable = (props) => {
   return (
     <Card extra={"w-full pb-10 p-4 h-full"}>
       <header className="relative flex items-center justify-between">
-        <div className="text-xl font-bold text-navy-700 dark:text-white">
+        <div className="text-xl font-semibold text-red-500 ">
           4-Columns Table
         </div>
         <CardMenu />
@@ -52,9 +52,9 @@ const ColumnsTable = (props) => {
                   <th
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                     key={index}
-                    className="border-b border-gray-200 pr-14 pb-[10px] text-start dark:!border-navy-700"
+                    className="border-b border-gray-200 pr-14 pb-[10px] text-start "
                   >
-                    <div className="flex w-full justify-between pr-10 text-xs tracking-wide text-gray-600">
+                    <div className="flex w-full justify-between pr-10 text-xs tracking-wide text-gray-400">
                       {column.render("Header")}
                     </div>
                   </th>
@@ -71,25 +71,25 @@ const ColumnsTable = (props) => {
                     let data;
                     if (cell.column.Header === "NAME") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-sm font-bold text-gray-700 ">
                           {cell.value}
                         </p>
                       );
                     } else if (cell.column.Header === "PROGRESS") {
                       data = (
-                        <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
+                        <p className="mr-[10px] text-sm font-semibold text-gray-700 ">
                           {cell.value}%
                         </p>
                       );
                     } else if (cell.column.Header === "QUANTITY") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-sm font-bold text-gray-700 ">
                           {cell.value}
                         </p>
                       );
                     } else if (cell.column.Header === "DATE") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-sm font-bold text-gray-700 ">
                           {cell.value}
                         </p>
                       );

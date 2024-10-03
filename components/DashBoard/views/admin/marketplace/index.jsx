@@ -23,13 +23,13 @@ const Marketplace = () => {
 
         {/* NFt Header */}
         <div className="mb-4 mt-5 flex flex-col justify-between px-4 md:flex-row md:items-center">
-          <h4 className="ml-1 text-2xl font-bold text-navy-700 dark:text-white">
-            Trending NFTs
+          <h4 className="ml-1 text-xl font-bold text-gray-700 ">
+            Creators with Ongoing Deals
           </h4>
           <ul className="mt-4 flex items-center justify-between md:mt-0 md:justify-center md:!gap-5 2xl:!gap-12">
             <li>
               <a
-                className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
+                className="text-base font-medium text-[#e65c55] hover:text-gray-500 "
                 href=" "
               >
                 Art
@@ -37,7 +37,7 @@ const Marketplace = () => {
             </li>
             <li>
               <a
-                className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
+                className="text-base font-medium text-[#e65c55] hover:text-gray-500 "
                 href=" "
               >
                 Music
@@ -45,7 +45,7 @@ const Marketplace = () => {
             </li>
             <li>
               <a
-                className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
+                className="text-base font-medium text-[#e65c55] hover:text-gray-500 "
                 href=" "
               >
                 Collection
@@ -53,7 +53,7 @@ const Marketplace = () => {
             </li>
             <li>
               <a
-                className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
+                className="text-base font-medium text-[#e65c55] hover:text-gray-500 "
                 href=" "
               >
                 <a href=" ">Sports</a>
@@ -66,8 +66,8 @@ const Marketplace = () => {
         <div className="z-20 grid grid-cols-1 gap-5 md:grid-cols-3">
           <NftCard
             bidders={[avatar1, avatar2, avatar3]}
-            title="Abstract Colors"
-            author="Esthera Jackson"
+            title="McDonalds Deals"
+            author="McDonalds"
             price="0.91"
             image={NFt3}
           />
@@ -89,9 +89,7 @@ const Marketplace = () => {
 
         {/* Recenlty Added setion */}
         <div className="mb-5 mt-5 flex items-center justify-between px-[26px]">
-          <h4 className="text-2xl font-bold text-navy-700 dark:text-white">
-            Recently Added
-          </h4>
+          <h4 className="text-2xl font-bold text-gray-700 ">Recently Added</h4>
         </div>
 
         {/* Recently Add NFTs */}

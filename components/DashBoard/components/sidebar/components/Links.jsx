@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
 import DashIcon from "../../../components/icons/DashIcon";
 // chakra imports
 
@@ -29,7 +28,7 @@ export function SidebarLinks(props) {
                 <span
                   className={`${
                     selectedComponent == route.component
-                      ? "font-bold text-brand-500 text-black"
+                      ? "font-bold text-brand-500 text-[#e65c55]"
                       : "font-medium text-gray-600"
                   }`}
                 >
@@ -38,7 +37,7 @@ export function SidebarLinks(props) {
                 <p
                   className={`leading-1 ml-4 flex ${
                     selectedComponent == route.component
-                      ? "font-bold text-navy-700 text-black"
+                      ? "font-bold text-navy-700 text-black underline"
                       : "font-medium text-gray-600"
                   }`}
                 >

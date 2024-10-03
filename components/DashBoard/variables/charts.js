@@ -15,7 +15,7 @@ export const barChartOptionsDailyTraffic = {
     style: {
       fontSize: "12px",
       fontFamily: undefined,
-      backgroundColor: "#000000"
+      backgroundColor: "#000000",
     },
     onDatasetHover: {
       style: {
@@ -79,12 +79,12 @@ export const barChartOptionsDailyTraffic = {
         [
           {
             offset: 0,
-            color: "#4318FF",
+            color: "#e65c55",
             opacity: 1,
           },
           {
             offset: 100,
-            color: "rgba(67, 24, 255, 1)",
+            color: "#e65c55",
             opacity: 0.28,
           },
         ],
@@ -104,7 +104,7 @@ export const barChartOptionsDailyTraffic = {
 
 export const pieChartOptions = {
   labels: ["Your files", "System", "Empty"],
-  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  colors: ["#e65c55", "#ffddca", "#E1E9F8"],
   chart: {
     width: "50px",
   },
@@ -133,7 +133,7 @@ export const pieChartOptions = {
     },
   },
   fill: {
-    colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+    colors: ["#e65c55", "#ffddca", "#E1E9F8"],
   },
   tooltip: {
     enabled: true,
@@ -141,7 +141,7 @@ export const pieChartOptions = {
     style: {
       fontSize: "12px",
       fontFamily: undefined,
-      backgroundColor: "#000000"
+      backgroundColor: "#000000",
     },
   },
 };
@@ -152,12 +152,12 @@ export const barChartDataWeeklyRevenue = [
   {
     name: "PRODUCT A",
     data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-    color: "#6AD2Fa",
+    color: "#e65c55",
   },
   {
     name: "PRODUCT B",
     data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-    color: "#4318FF",
+    color: "#ffddca",
   },
   {
     name: "PRODUCT C",
@@ -173,14 +173,13 @@ export const barChartOptionsWeeklyRevenue = {
       show: false,
     },
   },
-  // colors:['#ff3322','#faf']
   tooltip: {
     style: {
       fontSize: "12px",
       fontFamily: undefined,
-      backgroundColor: "#000000"
+      backgroundColor: "#000000",
     },
-    theme: 'dark',
+    theme: "dark",
     onDatasetHover: {
       style: {
         fontSize: "12px",
@@ -239,12 +238,12 @@ export const barChartOptionsWeeklyRevenue = {
   },
   fill: {
     type: "solid",
-    colors: ["#5E37FF", "#6AD2FF", "#E1E9F8"],
+    colors: ["#e65c55", "#ffddca", "#E1E9F8"],
   },
   legend: {
     show: false,
   },
-  colors: ["#5E37FF", "#6AD2FF", "#E1E9F8"],
+  colors: ["#e65c55", "#ffddca", "#E1E9F8"],
   dataLabels: {
     enabled: false,
   },
@@ -259,13 +258,13 @@ export const barChartOptionsWeeklyRevenue = {
 export const lineChartDataTotalSpent = [
   {
     name: "Revenue",
-    data: [50, 64, 48, 66, 49, 68],
-    color: "#4318FF",
+    data: [50, 64, 48, 36, 49, 68],
+    color: "#e65c55",
   },
   {
     name: "Profit",
-    data: [30, 40, 24, 46, 20, 46],
-    color: "#6AD2FF",
+    data: [30, 40, 24, 56, 20, 46],
+    color: "#e4e7ea",
   },
 ];
 
@@ -296,9 +295,9 @@ export const lineChartOptionsTotalSpent = {
     style: {
       fontSize: "12px",
       fontFamily: undefined,
-      backgroundColor: "#000000"
+      backgroundColor: "#000000",
     },
-    theme: 'dark',
+    theme: "dark",
     x: {
       format: "dd/MM/yy HH:mm",
     },

@@ -46,13 +46,16 @@ export const Header = (props: HeaderProps) => {
         <Flex width="full" align="center" justify="space-between">
           <Logo
             onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
+              if (typeof window !== "undefined") {
+                if (window.location.pathname === "/") {
+                  e.preventDefault();
 
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                });
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }
+                // browser code
               }
             }}
           />

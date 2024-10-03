@@ -1,6 +1,6 @@
 import Card from "../../../../components/card";
 import Progress from "../../../../components/progress";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import {
   useGlobalFilter,
   usePagination,
@@ -10,6 +10,7 @@ import {
 
 function TopCreatorTable(props) {
   const { columnsData, tableData } = props;
+  const [openDropDown, setOpenDropDown] = useState(false);
 
   const columns = useMemo(() => columnsData, [columnsData]);
   const data = useMemo(() => tableData, [tableData]);
@@ -30,13 +31,91 @@ function TopCreatorTable(props) {
   return (
     <Card extra={"h-[600px] w-full"}>
       {/* Top Creator Header */}
-      <div className="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pt-4 pb-[20px] shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
-        <h4 className="text-lg font-bold text-navy-700 dark:text-white">
-          Top Creators
-        </h4>
-        <button className="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
-          See all
-        </button>
+      <div className="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pt-4 pb-[20px] shadow-2xl shadow-gray-100">
+        <h4 className="text-lg font-bold text-red-500 ">Top Creators</h4>
+        <div class="flex gap-2">
+          <div class="relative inline-block text-left">
+            <div>
+              <button
+                type="button"
+                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                id="menu-button"
+                aria-expanded="true"
+                aria-haspopup="true"
+                onClick={() => setOpenDropDown(!openDropDown)}
+              >
+                Categories
+                <svg
+                  class="-mr-1 h-5 w-5 text-gray-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {openDropDown && (
+              <div
+                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabindex="-1"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-0"
+                  >
+                    Account settings
+                  </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-1"
+                  >
+                    Support
+                  </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-2"
+                  >
+                    License
+                  </a>
+                  <form method="POST" action="#" role="none">
+                    <button
+                      type="submit"
+                      class="block w-full px-4 py-2 text-left text-sm text-gray-700"
+                      role="menuitem"
+                      tabindex="-1"
+                      id="menu-item-3"
+                    >
+                      Sign out
+                    </button>
+                  </form>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <button className="linear rounded-[20px] bg-gray-200 px-2 py-1 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 ">
+            See all
+          </button>
+        </div>
       </div>
 
       {/* Top Creator Heading */}
@@ -79,14 +158,14 @@ function TopCreatorTable(props) {
                               alt=""
                             />
                           </div>
-                          <p className="text-sm font-medium text-navy-700 dark:text-white">
+                          <p className="text-sm font-medium text-gray-700 ">
                             {cell.value[0]}
                           </p>
                         </div>
                       );
                     } else if (cell.column.Header === "Artworks") {
                       data = (
-                        <p className="text-md font-medium text-gray-600 dark:text-white">
+                        <p className="text-md font-medium text-gray-600 ">
                           {cell.value}
                         </p>
                       );

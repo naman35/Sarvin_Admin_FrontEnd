@@ -19,13 +19,13 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { SEO } from "components/seo/seo";
+import { Header, HeaderProps } from "../components/layout/header";
 
 import { FallInPlace } from "components/motion/fall-in-place";
 import { Hero } from "components/hero";
 import { Link, Br } from "@saas-ui/react";
 import { Em } from "components/typography";
 import { NextjsLogo, ChakraLogo } from "components/logos";
-import "./css/globals.css";
 import {
   FiArrowRight,
   FiBox,
@@ -60,6 +60,7 @@ import {
 const Home: NextPage = () => {
   return (
     <Box>
+      <Header />
       <SEO
         title="Sarvin Admin-Panel"
         description="Admin Panel for Sarvin Employees"

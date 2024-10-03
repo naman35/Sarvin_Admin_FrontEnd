@@ -3,6 +3,7 @@ import React from "react";
 // Admin Imports
 import MainDashboard from "./views/admin/default";
 import NFTMarketplace from "./views/admin/marketplace";
+import BrandZone from "./views/admin/Brandzone";
 import Profile from "./views/admin/profile";
 import DataTables from "./views/admin/tables";
 // import RTLDefault from "./views/rtl/default";
@@ -28,7 +29,23 @@ const routes = [
     component: <MainDashboard />,
   },
   {
-    name: "NFT Marketplace",
+    name: "Influencers Zone",
+    layout: "/admin",
+    path: "nft-marketplace",
+    icon: <MdOutlineShoppingCart className="h-6 w-6" />,
+    component: <NFTMarketplace />,
+    secondary: true,
+  },
+  {
+    name: "Brandz Zone",
+    layout: "/admin",
+    path: "nft-marketplace",
+    icon: <MdOutlineShoppingCart className="h-6 w-6" />,
+    component: <BrandZone />,
+    secondary: true,
+  },
+  {
+    name: "Brand Deal Section",
     layout: "/admin",
     path: "nft-marketplace",
     icon: <MdOutlineShoppingCart className="h-6 w-6" />,

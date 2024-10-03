@@ -39,9 +39,7 @@ const CheckTable = (props) => {
   return (
     <Card extra={"w-full sm:overflow-auto p-4"}>
       <header className="relative flex items-center justify-between">
-        <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Check Table
-        </div>
+        <div className="text-xl font-semibold text-red-500 ">Check Table</div>
 
         <CardMenu />
       </header>
@@ -60,10 +58,10 @@ const CheckTable = (props) => {
                 {headerGroup.headers.map((column, index) => (
                   <th
                     {...column.getHeaderProps(column.getSortByToggleProps())}
-                    className="border-b border-gray-200 pr-16 pb-[10px] text-start dark:!border-navy-700"
+                    className="border-b border-gray-200 pr-16 pb-[10px] text-start "
                     key={index}
                   >
-                    <div className="text-xs font-bold tracking-wide text-gray-600 lg:text-xs">
+                    <div className="text-xs font-bold tracking-wide text-gray-400 lg:text-xs">
                       {column.render("Header")}
                     </div>
                   </th>
@@ -82,7 +80,7 @@ const CheckTable = (props) => {
                       data = (
                         <div className="flex items-center gap-2">
                           <Checkbox />
-                          <p className="text-sm font-bold text-navy-700 dark:text-white">
+                          <p className="text-sm font-bold text-gray-700 ">
                             {cell.value[0]}
                           </p>
                         </div>
@@ -90,21 +88,21 @@ const CheckTable = (props) => {
                     } else if (cell.column.Header === "PROGRESS") {
                       data = (
                         <div className="flex items-center">
-                          <p className="text-sm font-bold text-navy-700 dark:text-white">
+                          <p className="text-sm font-bold text-gray-700 ">
                             {cell.value}%
                           </p>
                         </div>
                       );
                     } else if (cell.column.Header === "QUANTITY") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-sm font-bold text-gray-700 ">
                           {" "}
                           {cell.value}{" "}
                         </p>
                       );
                     } else if (cell.column.Header === "DATE") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-sm font-bold text-gray-700 ">
                           {cell.value}
                         </p>
                       );

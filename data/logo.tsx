@@ -5,7 +5,6 @@ export const Logo: React.FC<HTMLChakraProps<"svg">> = (props) => {
   return (
     <span
       style={{
-        boxSizing: "border-box",
         display: "inline-block",
         overflow: "hidden",
         width: "initial",

@@ -25,32 +25,32 @@ const Dashboard = () => {
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
           title={"Earnings"}
-          subtitle={"$340.5"}
+          subtitle={"Rs.0"}
         />
         <Widget
           icon={<IoDocuments className="h-6 w-6" />}
-          title={"Spend this month"}
-          subtitle={"$642.39"}
+          title={"Brand Connected"}
+          subtitle={"0"}
         />
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
-          title={"Sales"}
-          subtitle={"$574.34"}
+          title={"Deal Posted"}
+          subtitle={"0"}
         />
         <Widget
           icon={<MdDashboard className="h-6 w-6" />}
-          title={"Your Balance"}
-          subtitle={"$1,000"}
+          title={"Deal Ongoing"}
+          subtitle={"0"}
         />
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
-          title={"New Tasks"}
-          subtitle={"145"}
+          title={"Influencers Connected"}
+          subtitle={"0"}
         />
         <Widget
           icon={<IoMdHome className="h-6 w-6" />}
-          title={"Total Projects"}
-          subtitle={"$2433"}
+          title={"Total Bid Deals"}
+          subtitle={"0"}
         />
       </div>
 
@@ -89,7 +89,7 @@ const Dashboard = () => {
         {/* Task chart & Calendar */}
 
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <TaskCard />
+          <PieChartCard label="Influencer Categories" />
           <div className="grid grid-cols-1 rounded-[20px]">
             <MiniCalendar />
           </div>
